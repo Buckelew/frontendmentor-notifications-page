@@ -1,0 +1,226 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --clr-primary-red: hsl(1, 90%, 64%);
+  --clr-primary-blue: hsl(219, 85%, 26%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(210, 60%, 98%);
+  --clr-neutral-300: hsl(211, 68%, 94%);
+  --clr-neutral-400: hsl(205, 33%, 90%);
+  --clr-neutral-500: hsl(219, 14%, 63%);
+  --clr-neutral-700: hsl(219, 12%, 42%);
+  --clr-neutral-900: hsl(224, 21%, 14%);
+
+  font-size: 16px;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: var(--clr-neutral-200);
+  width: 100%;
+  height: 100%;
+}
+
+div.container {
+  margin: 4rem auto;
+  border-radius: 1rem;
+  max-width: 710px;
+  min-width: 300px;
+  background-color: var(--clr-neutral-100);
+
+  padding: 2rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 30px 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+div.amount {
+  text-align: center;
+  margin: auto;
+  background-color: var(--clr-primary-blue);
+  width: 30px;
+  border-radius: 5px;
+  color: var(--clr-neutral-100);
+}
+
+header button {
+  background: none;
+  border: none;
+  color: var(--clr-neutral-700);
+  max-width: max-content;
+  margin-left: auto;
+}
+
+ul.notifcations {
+  padding: 0;
+  margin: 0;
+}
+
+ul.notifcations li {
+  margin: 0.5rem 0;
+  display: flex;
+  width: 100%;
+
+  padding: 1rem;
+
+  border-radius: 5px;
+}
+
+ul.notifcations li.unread {
+  background-color: var(--clr-neutral-200);
+}
+
+ul.notifcations li div.circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--clr-primary-red);
+  margin-bottom: 2px;
+  display: none;
+}
+
+ul.notifcations li.unread div.circle {
+  margin-left: 2px;
+  display: inline-block;
+}
+
+ul.notifcations li span b,
+ul.notifcations li span strong,
+ul.notifcations li span a,
+ul.notifcations li span em {
+  font-weight: 800;
+}
+
+ul.notifcations li span strong {
+  color: var(--clr-neutral-900);
+}
+
+ul.notifcations li sub {
+  color: var(--clr-neutral-500);
+  font-size: 16px;
+}
+
+ul.notifcations li span em {
+  font-style: normal;
+  color: var(--clr-neutral-700);
+}
+
+ul.notifcations li span a {
+  color: var(--clr-neutral-700);
+}
+
+ul.notifcations li div.message {
+  color: var(--clr-neutral-700);
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid var(--clr-neutral-400);
+}
+
+ul.notifcations li img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+button:hover {
+  cursor: pointer;
+  color: var(--clr-primary-blue);
+}
+
+ul.notifcations span b:hover,
+ul.notifcations span strong:hover,
+ul.notifcations span em:hover,
+ul.notifcations span a:hover {
+  color: var(--clr-primary-blue);
+  cursor: pointer;
+}
+
+ul.notifcations .message:hover {
+  background-color: var(--clr-neutral-300);
+  cursor: pointer;
+}
