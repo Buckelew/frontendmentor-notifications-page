@@ -2,7 +2,7 @@
 
 ### Links
 
-- Live Site URL:
+- Live Site URL: [https://buckelew.github.io/frontendmentor-notifications-page/](https://buckelew.github.io/frontendmentor-notifications-page/)
 
 ## My process
 
